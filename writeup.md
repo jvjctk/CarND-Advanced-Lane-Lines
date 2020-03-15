@@ -82,7 +82,7 @@ Images can be splitted into different colorspaces. I also applied set a threshol
 'cv2.cvtColor' fuction provides different colorspace properties. Sobel is another feature extraction which can be applied as gradient and directional. Code applied can be found in IPython notebook for further reference. Examples are given below.
 
 color extraction
-![alt text](output_images/HLS colorspace.PNG)
+![alt text](output_images/HLS%20colorspace.PNG)
 
 sobel application
 ![alt text](output_images/sobelall.PNG)

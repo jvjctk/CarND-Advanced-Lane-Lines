@@ -49,13 +49,13 @@ You're reading it!
 The code for this step is contained in the IPython notebook named 'AdvancedLineFinding.ipynb' in 1-5 cells. Images for camera caliberation is provided in the folder "./camera_cal/". I took this images and used  'ret, corners = cv2.findChessboardCorners(gray, (9,6), None)'. Here 9 and 6 are the numbers of chessboard lines. Thus I got image and object points in dicts named 'imgpoints' and 'objpoints'. Using this points, camera distortion matrices named 'mtx' and 'dist' are calculated with 'cv2.calibrateCamera' function.
 
 Here is a sample image of chessboard image with found corners.
-![alt text][image1]
+![alt text][./output_images/chessboardwithcorners.PNG]
 
 Undistorted image of chessboard is given below which is found using openCV funtion 'cv2.undistort' and 'mtx','dist' matrices.
-![alt text][image1]
+![alt text][./output_images/undistortedChessboard.PNG]
 
 Same method is applied for real captured images and a sample image is given below. The code can be found in 7th cell of IPython notebook. 
-![alt text][image1]
+![alt text][./output_images/undistortedCapturedImage.PNG]
 
 More examples can be found in IPython notebook.
 
@@ -82,10 +82,10 @@ Images can be splitted into different colorspaces. I also applied set a threshol
 'cv2.cvtColor' fuction provides different colorspace properties. Sobel is another feature extraction which can be applied as gradient and directional. Code applied can be found in IPython notebook for further reference. Examples are given below.
 
 color extraction
-![alt text][image1]
+![alt text][./output_images/HLS colorspace.PNG]
 
 sobel application
-![alt text][image1]
+![alt text][./output_images/sobelall.PNG]
 
 I selected 'H' and 'L' color channels from 'HLS' colorspace and 'Y' from 'YUV' colorspace for better results.
 
@@ -119,7 +119,7 @@ complete code can be found in function 'fit_polynomial'
 
 #### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
 
-Here's a [link to my video result](./project_video.mp4)
+Here's a [link to my video result](./project_video_output.mp4)
 
 ---
 
@@ -127,4 +127,5 @@ Here's a [link to my video result](./project_video.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+1. Calculations for sliding window algorithm can be simplified
+2. Calculations from a video contains continous frames. So calculations can also be simplified for this frames.

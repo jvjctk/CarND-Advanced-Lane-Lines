@@ -49,13 +49,13 @@ You're reading it!
 The code for this step is contained in the IPython notebook named 'AdvancedLineFinding.ipynb' in 1-5 cells. Images for camera caliberation is provided in the folder "./camera_cal/". I took this images and used  'ret, corners = cv2.findChessboardCorners(gray, (9,6), None)'. Here 9 and 6 are the numbers of chessboard lines. Thus I got image and object points in dicts named 'imgpoints' and 'objpoints'. Using this points, camera distortion matrices named 'mtx' and 'dist' are calculated with 'cv2.calibrateCamera' function.
 
 Here is a sample image of chessboard image with found corners.
-![alt text][./output_images/chessboardwithcorners.PNG]
+![alt text](output_images/chessboardwithcorners.PNG)
 
 Undistorted image of chessboard is given below which is found using openCV funtion 'cv2.undistort' and 'mtx','dist' matrices.
-![alt text][./output_images/undistortedChessboard.PNG]
+![alt text](output_images/undistortedChessboard.PNG)
 
 Same method is applied for real captured images and a sample image is given below. The code can be found in 7th cell of IPython notebook. 
-![alt text][./output_images/undistortedCapturedImage.PNG]
+![alt text](output_images/undistortedCapturedImage.PNG)
 
 More examples can be found in IPython notebook.
 
@@ -82,10 +82,10 @@ Images can be splitted into different colorspaces. I also applied set a threshol
 'cv2.cvtColor' fuction provides different colorspace properties. Sobel is another feature extraction which can be applied as gradient and directional. Code applied can be found in IPython notebook for further reference. Examples are given below.
 
 color extraction
-![alt text][./output_images/HLS colorspace.PNG]
+![alt text](output_images/HLS colorspace.PNG)
 
 sobel application
-![alt text][./output_images/sobelall.PNG]
+![alt text](output_images/sobelall.PNG)
 
 I selected 'H' and 'L' color channels from 'HLS' colorspace and 'Y' from 'YUV' colorspace for better results.
 
